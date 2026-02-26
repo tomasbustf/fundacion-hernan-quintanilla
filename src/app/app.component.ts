@@ -12,6 +12,7 @@ declare var bootstrap: any;
 })
 export class AppComponent implements AfterViewInit {
   title = 'fundacion-hernan-quintanilla';
+  menuAbierto = false;
 
   ngAfterViewInit() {
     // Inicializar dropdowns de Bootstrap
@@ -19,6 +20,14 @@ export class AppComponent implements AfterViewInit {
     dropdownElementList.forEach((dropdownToggleEl) => {
       new bootstrap.Dropdown(dropdownToggleEl);
     });
+  }
+
+  toggleMenu() {
+    this.menuAbierto = !this.menuAbierto;
+  }
+
+  cerrarMenu() {
+    this.menuAbierto = false;
   }
 
   closeDropdown() {
@@ -29,5 +38,6 @@ export class AppComponent implements AfterViewInit {
         dropdown.hide();
       }
     }
+    this.cerrarMenu();
   }
 }
