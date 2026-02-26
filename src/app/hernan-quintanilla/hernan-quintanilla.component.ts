@@ -110,6 +110,16 @@ export class HernanQuintanillaComponent implements AfterViewInit, OnDestroy {
     { titulo: 'Lautaro', categoria: 'Teatro Adultos', nota: 'Actuación con Andrés Pavez' },
   ];
 
+  // Navegación por secciones
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80; // Offset para el navbar
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }
+
   // Lightbox
   abrirLightbox(galeria: ImagenGaleria[], idx: number) {
     this.galeriaActiva = galeria;

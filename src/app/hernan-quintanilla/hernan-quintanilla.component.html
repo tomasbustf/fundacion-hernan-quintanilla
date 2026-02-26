@@ -14,13 +14,13 @@
   <div class="hernan-header-bg"></div>
   <div class="container hernan-header-content">
     <span class="etiqueta-blanca">Hernán Quintanilla Méndez · 1938 — 2021</span>
-    <h1>Maestro, Poeta,<br><em>Dramaturgo</em></h1>
+    <h1>Maestro, poeta,<br><em>dramaturgo</em></h1>
     <p class="hernan-header-sub">Trayectoria, obra y reconocimientos de un referente de la cultura chilena.</p>
     <div class="hernan-nav-tabs">
-      <a href="#antecedentes" class="hernan-tab">Biografía</a>
-      <a href="#reconocimientos" class="hernan-tab">Reconocimientos</a>
-      <a href="#trayectoria-galeria" class="hernan-tab">Trayectoria</a>
-      <a href="#obra" class="hernan-tab">Obra</a>
+      <a class="hernan-tab" (click)="scrollToSection('antecedentes')">Biografía</a>
+      <a class="hernan-tab" (click)="scrollToSection('reconocimientos')">Reconocimientos</a>
+      <a class="hernan-tab" (click)="scrollToSection('trayectoria-galeria')">Trayectoria</a>
+      <a class="hernan-tab" (click)="scrollToSection('obra')">Obra</a>
     </div>
   </div>
 </div>
@@ -89,7 +89,7 @@
         </div>
         <div class="hito">
           <div class="hito-anio">1992</div>
-          <div class="hito-desc">"El Encuentro" se estrena en Buenos Aires, conmemoración 500 años.</div>
+          <div class="hito-desc">"El Encuentro" se estrena en Buenos Aires.</div>
         </div>
         <div class="hito">
           <div class="hito-anio">2018</div>
@@ -98,6 +98,11 @@
         <div class="hito">
           <div class="hito-anio">2021</div>
           <div class="hito-desc">Premio Regional de las Culturas. Fallece el 24 de diciembre en Rengo.</div>
+        </div>
+
+        <div class="hito">
+          <div class="hito-anio">2021</div>
+          <div class="hito-desc">Muere el 24 de diciembre de 2021 en Rengo a los 83 años.</div>
         </div>
       </div>
     </div>
