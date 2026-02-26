@@ -1,0 +1,30 @@
+.page-header { position: relative; background: var(--negro); padding: 5rem 0 3rem; overflow: hidden; }
+.page-header-bg { position: absolute; inset: 0; background: radial-gradient(circle at 70% 50%, rgba(215,25,32,0.18) 0%, transparent 55%); }
+.page-header-content { position: relative; z-index: 1; }
+.etiqueta-blanca { display: inline-block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.75rem; }
+.page-header h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 900; color: var(--blanco); line-height: 1.1; }
+.page-header h1 em { font-style: italic; color: var(--rojo); }
+.seccion-page { padding: 5rem 0; background: var(--crema); }
+.contacto-intro { font-family: var(--font-serif); font-size: 1rem; color: var(--gris-texto); line-height: 1.8; margin-bottom: 2rem; }
+.contacto-lista { margin-bottom: 2.5rem; }
+.contacto-row { display: flex; gap: 1rem; align-items: flex-start; padding: 1rem 0; border-bottom: 1px solid rgba(0,0,0,0.08); }
+.contacto-row:last-child { border-bottom: none; }
+.contacto-icon { width: 2.5rem; height: 2.5rem; border-radius: 8px; background: var(--rojo-suave); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; color: var(--rojo); flex-shrink: 0; }
+.cl-label { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gris-medio); }
+.cl-val { font-family: var(--font-sans); font-size: 0.95rem; color: var(--gris-oscuro); margin-top: 0.15rem; }
+.redes-sociales { }
+.rs-titulo { font-family: var(--font-sans); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gris-medio); margin-bottom: 0.75rem; }
+.rs-iconos { display: flex; gap: 0.75rem; }
+.rs-btn { width: 2.5rem; height: 2.5rem; border-radius: 8px; background: var(--negro); display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1rem; text-decoration: none; transition: background 0.2s; }
+.rs-btn:hover { background: var(--rojo); color: white; }
+.contacto-form-card { background: var(--blanco); border-radius: var(--radius); padding: 2.25rem; box-shadow: var(--shadow-md); }
+.contacto-form-card h4 { font-family: var(--font-display); font-size: 1.3rem; color: var(--negro); margin-bottom: 1.5rem; }
+.form-label { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 600; color: var(--gris-oscuro); letter-spacing: 0.03em; margin-bottom: 0.35rem; }
+.fhq-input {
+  font-family: var(--font-sans); font-size: 0.92rem;
+  border: 1.5px solid rgba(0,0,0,0.12); border-radius: 8px;
+  padding: 0.65rem 0.9rem; background: var(--crema);
+  transition: border-color 0.2s, box-shadow 0.2s; color: var(--gris-oscuro);
+}
+.fhq-input:focus { outline: none; border-color: var(--rojo); box-shadow: 0 0 0 3px rgba(215,25,32,0.1); background: var(--blanco); }
+.w-100 { width: 100% !important; }

@@ -1,0 +1,16 @@
+.page-header { position: relative; background: var(--negro); padding: 5rem 0 3rem; overflow: hidden; }
+.page-header-bg { position: absolute; inset: 0; background: radial-gradient(circle at 70% 50%, rgba(215,25,32,0.18) 0%, transparent 55%); }
+.page-header-content { position: relative; z-index: 1; }
+.etiqueta-blanca { display: inline-block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.75rem; }
+.page-header h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 900; color: var(--blanco); line-height: 1.1; }
+.page-header h1 em { font-style: italic; color: var(--rojo); }
+.page-header-sub { font-family: var(--font-serif); font-size: 1rem; color: rgba(255,255,255,0.55); margin-top: 0.5rem; }
+.seccion-page { padding: 5rem 0; background: var(--crema); min-height: 50vh; display: flex; align-items: center; }
+.noticias-placeholder {
+  text-align: center; max-width: 480px; margin: 0 auto;
+  background: var(--blanco); border-radius: var(--radius);
+  padding: 3.5rem 2.5rem; box-shadow: var(--shadow-sm);
+}
+.placeholder-icono { font-size: 3rem; color: var(--rojo); margin-bottom: 1.25rem; }
+.noticias-placeholder h3 { font-family: var(--font-display); font-size: 1.5rem; color: var(--negro); margin-bottom: 0.75rem; }
+.noticias-placeholder p { font-family: var(--font-sans); font-size: 0.95rem; color: var(--gris-texto); margin-bottom: 1.5rem; }

@@ -1,0 +1,337 @@
+/* ── Hero ── */
+.hero {
+  position: relative;
+  background: var(--negro);
+  overflow: hidden;
+  padding: 5rem 0 4rem;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 75% 30%, rgba(215, 25, 32, 0.18) 0%, transparent 55%),
+    radial-gradient(circle at 20% 70%, rgba(215, 25, 32, 0.08) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.min-vh-80 {
+  min-height: 80vh;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--rojo);
+  margin-bottom: 1.5rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(215, 25, 32, 0.4);
+  border-radius: 4px;
+}
+
+.hero-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 900;
+  color: var(--blanco);
+  line-height: 1.08;
+  margin-bottom: 1.5rem;
+}
+
+.hero-titulo em {
+  font-style: italic;
+  color: var(--rojo);
+}
+
+.hero-bajada {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.8;
+  max-width: 540px;
+  margin-bottom: 2.5rem;
+}
+
+.hero-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.hero-emblema {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-logo-grande {
+  width: 280px;
+  filter: drop-shadow(0 8px 32px rgba(215, 25, 32, 0.35));
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.hero-anio {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 1.5rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(6px);
+  }
+}
+
+/* ── Pilares ── */
+.pilares-section {
+  background: var(--blanco);
+  padding: 0;
+}
+
+.pilar {
+  padding: 3rem 2.5rem;
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+  transition: background 0.3s;
+}
+
+.pilar:last-child {
+  border-right: none;
+}
+
+.pilar:hover {
+  background: var(--crema);
+}
+
+.pilar-centro {
+  background: var(--crema);
+  border-right: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.pilar-icono {
+  font-size: 2rem;
+  color: var(--rojo);
+  margin-bottom: 1rem;
+}
+
+.pilar h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--negro);
+}
+
+.pilar p {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--gris-texto);
+  margin: 0;
+}
+
+/* ── Cita ── */
+.cita-section {
+  background: var(--rojo);
+  padding: 5rem 0;
+}
+
+.cita-bloque {
+  margin: 0;
+  text-align: center;
+}
+
+.cita-bloque blockquote {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--blanco);
+  line-height: 1.3;
+  margin-bottom: 1.5rem;
+  quotes: "\u201C" "\u201D";
+}
+
+.cita-bloque blockquote::before {
+  content: open-quote;
+}
+
+.cita-bloque blockquote::after {
+  content: close-quote;
+}
+
+.cita-bloque figcaption {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+
+/* ── Datos ── */
+.datos-section {
+  background: var(--negro);
+  padding: 4rem 0;
+}
+
+.dato-card {
+  text-align: center;
+  padding: 1rem;
+}
+
+.dato-numero {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--rojo);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.dato-label {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Accesos ── */
+.accesos-section {
+  background: var(--crema);
+  padding: 5rem 0;
+}
+
+.acceso-card {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--blanco);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: inherit;
+  text-decoration: none;
+  height: 100%;
+}
+
+.acceso-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  color: inherit;
+}
+
+.acceso-img {
+  height: 180px;
+  background: var(--gris-claro);
+  position: relative;
+  overflow: hidden;
+}
+
+.acceso-biografia {
+  background-image: url('/assets/img/hernan1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  /* importante si no tiene altura */
+}
+
+.acceso-premios {
+  background-image: url('/assets/img/premios/premio-33.jpg');
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  height: 200px;
+  /* importante si no tiene altura */
+}
+
+.acceso-colabora {
+  background-image: url('/assets/img/principal 2.png');
+  background-size: cover;
+  /* background-position: center; */
+  background-repeat: no-repeat;
+  height: 200px;
+  /* importante si no tiene altura */
+}
+
+.acceso-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.3));
+}
+
+.acceso-body {
+  padding: 1.5rem;
+}
+
+.acceso-body h4 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--negro);
+  margin-bottom: 0.5rem;
+}
+
+.acceso-body p {
+  font-size: 0.9rem;
+  color: var(--gris-texto);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.acceso-link {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--rojo);
+  letter-spacing: 0.02em;
+}
+
+.cita-bloque blockquote::before {
+  content: "“";
+}
+
+.cita-bloque blockquote::after {
+  content: "”";
+}

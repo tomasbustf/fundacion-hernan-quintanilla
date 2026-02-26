@@ -1,0 +1,27 @@
+.page-header {
+  position: relative; background: var(--negro);
+  padding: 5rem 0 3rem; overflow: hidden;
+}
+.page-header-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 70% 50%, rgba(215,25,32,0.18) 0%, transparent 55%);
+}
+.page-header-content { position: relative; z-index: 1; }
+.etiqueta-blanca { display: inline-block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.75rem; }
+.page-header h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 900; color: var(--blanco); line-height: 1.1; }
+.page-header h1 em { font-style: italic; color: var(--rojo); }
+.seccion-page { padding: 5rem 0; background: var(--crema); }
+.obj-intro { font-family: var(--font-serif); font-size: 1.08rem; color: var(--gris-oscuro); margin-bottom: 2rem; line-height: 1.8; }
+.obj-intro strong { color: var(--rojo-oscuro); }
+.obj-pilares-card {
+  background: var(--negro); border-radius: var(--radius);
+  padding: 1.75rem; position: sticky; top: 100px;
+}
+.obj-pilares-titulo { font-family: var(--font-display); font-size: 1.1rem; color: var(--blanco); margin-bottom: 1.25rem; }
+.obj-pilar {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.75); font-family: var(--font-sans); font-size: 0.92rem;
+}
+.obj-pilar:last-child { border-bottom: none; }
+.obj-pilar .bi { color: var(--rojo); font-size: 1.1rem; }

@@ -1,0 +1,283 @@
+<!-- Lightbox -->
+<div class="lightbox-overlay" [class.activo]="lightboxVisible" (click)="cerrarLightbox()">
+  <button class="lightbox-cerrar" (click)="cerrarLightbox()">×</button>
+  <button class="lightbox-nav lightbox-prev" (click)="$event.stopPropagation(); navLightbox(-1)">‹</button>
+  <img class="lightbox-img" [src]="galeriaActiva[lightboxIdx]?.src" [alt]="galeriaActiva[lightboxIdx]?.caption"
+    (click)="$event.stopPropagation()">
+  <button class="lightbox-nav lightbox-next" (click)="$event.stopPropagation(); navLightbox(1)">›</button>
+  <div class="lightbox-caption">{{ galeriaActiva[lightboxIdx]?.caption }} ({{ lightboxIdx + 1 }} / {{
+    galeriaActiva.length }})</div>
+</div>
+
+<!-- Page Header -->
+<div class="hernan-header">
+  <div class="hernan-header-bg"></div>
+  <div class="container hernan-header-content">
+    <span class="etiqueta-blanca">Hernán Quintanilla Méndez · 1938 — 2021</span>
+    <h1>Maestro, Poeta,<br><em>Dramaturgo</em></h1>
+    <p class="hernan-header-sub">Trayectoria, obra y reconocimientos de un referente de la cultura chilena.</p>
+    <div class="hernan-nav-tabs">
+      <a href="#antecedentes" class="hernan-tab">Biografía</a>
+      <a href="#reconocimientos" class="hernan-tab">Reconocimientos</a>
+      <a href="#trayectoria-galeria" class="hernan-tab">Trayectoria</a>
+      <a href="#obra" class="hernan-tab">Obra</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ BIOGRAFÍA ══ -->
+<section id="antecedentes" class="hernan-section">
+  <div class="container">
+    <div class="seccion-encabezado hidden-element">
+      <span class="etiqueta">Antecedentes Biográficos</span>
+      <h2>Una vida al servicio del teatro y la cultura</h2>
+      <hr class="divisor-rojo">
+    </div>
+
+    <div class="hernan-bio-grid">
+      <div class="hernan-bio-texto hidden-element">
+        <p><strong>Hablar del maestro Quintanilla es adentrarse en una trayectoria de más de 60 años dedicado a cultivar
+            y desarrollar el arte en variadas expresiones, particularmente el teatro, en su calidad de escritor, poeta,
+            pedagogo teatral, actor, director de teatro y dramaturgo.</strong> En esta última condición es vastamente
+          conocido en los ámbitos artísticos y teatrales de todo el país, además de Argentina, Estados Unidos y
+          ocasionalmente en Perú y Venezuela.</p>
+
+        <p>Hernán Alberto Quintanilla Méndez, nació el 8 de agosto de 1938, en la localidad de Empedrado, Región del
+          Maule. Hijo de Aurelio Quintanilla y Elisa Méndez, unión de la cual nacieron cuatro hijos e hijas: Hernán,
+          Elisa, Sonia y Aurelio, todos y todas ligados de alguna manera a alguna disciplina artística. La familia se
+          radicó a la temprana edad de Hernán en la ciudad de Rengo. Padre de dos hijos: María Soledad y Marcel.</p>
+
+        <p>De profesión Profesor Normalista, egresó de la Escuela Normal de Profesores de Curicó en 1957, obteniendo su
+          título por Decreto 448 del 18 de enero de 1961. Dentro de su formación, entre los años 1960 y 1964 participa
+          en los cursos de la Escuela de Verano de la Universidad de Chile sobre “Actuación y Dirección Teatral”. En
+          1979, curso elemental “Teatro en la escuela” del Centro de Perfeccionamiento e Investigaciones Pedagógicas del
+          Magisterio. En 1987, el plan de autoperfeccionamiento de Teatro, de la Dirección Provincial de Educación
+          Santiago Sur. En 1988, el curso de “Coordinador Cultural”, de la Fundación Nacional de Cultura y la
+          Universidad Metropolitana de Ciencias de la Educación (UMCE). En 1993, participa del Seminario Taller de
+          Pedagogía Teatral ACHITEJ y Escuela de Teatro de la Universidad de Chile. En 1994, participa del curso “Hacia
+          una pedagogía teatral moderna”, de la Universidad Blas Cañas y ACHITEJ.</p>
+
+
+        <p>Laboralmente se desempeñó como profesor primario, secundario y superior, Inspector General, Jefe de UTP y
+          Director, en instituciones educativas de Rengo, Santiago y San Miguel (1958 – 1974; 1978 – 1989). También como
+          Inspector del Trabajo entre los años 1968 y 1978, cargo con el que llegó a ser Gobernador Suplente del
+          Departamento de Caupolicán durante un breve periodo en 1970. Ocupó diversos cargos en la Sociedad de Autores
+          Teatrales de Chile, SATCH, llegando a ser Administrador del Teatro Cariola en Santiago.</p>
+
+      </div>
+
+      <div class="hernan-bio-hitos hidden-element" style="transition-delay:0.2s">
+        <div class="hito">
+          <div class="hito-anio">1938</div>
+          <div class="hito-desc">Nace en Empedrado, Maule. La familia se radica en Rengo.</div>
+        </div>
+        <div class="hito">
+          <div class="hito-anio">1957</div>
+          <div class="hito-desc">Egresa de la Escuela Normal de Profesores de Curicó.</div>
+        </div>
+        <div class="hito">
+          <div class="hito-anio">Años 60</div>
+          <div class="hito-desc">Cursos de Actuación y Dirección Teatral en la Universidad de Chile.</div>
+        </div>
+        <div class="hito">
+          <div class="hito-anio">1979</div>
+          <div class="hito-desc">Primera Cantata a San Miguel, con Orfeón de Carabineros.</div>
+        </div>
+        <div class="hito">
+          <div class="hito-anio">1990</div>
+          <div class="hito-desc">"Mari Mari, Cacique Puma" inaugura el Teatro Nacional de Chile.</div>
+        </div>
+        <div class="hito">
+          <div class="hito-anio">1992</div>
+          <div class="hito-desc">"El Encuentro" se estrena en Buenos Aires, conmemoración 500 años.</div>
+        </div>
+        <div class="hito">
+          <div class="hito-anio">2018</div>
+          <div class="hito-desc">Nombrado Hijo Ilustre de Rengo. El Teatro Municipal lleva su nombre.</div>
+        </div>
+        <div class="hito">
+          <div class="hito-anio">2021</div>
+          <div class="hito-desc">Premio Regional de las Culturas. Fallece el 24 de diciembre en Rengo.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hernan-bio-cont hidden-element">
+      <div class="hernan-bio-cont hidden-element">
+
+
+
+
+        <p>A su haber, encontramos decenas de obras de teatro, de todos los géneros y estilos; himnos de numerosos
+          establecimientos educacionales; cuentos y poemas, donde destacó como Poeta Laureado de las Fiestas
+          primaverales de los años 60 y 70.</p>
+
+        <p>También, fue actor, director y profesor de teatro. Formador de un sinnúmero de generaciones de artistas y
+          gestores culturales, tanto en Rengo, como en otras comunas del gran Santiago.</p>
+
+        <p>Fundador de numerosos grupos teatrales sindicales y gremiales, como de profesores y funcionarios públicos.
+          Sus obras han sido presentadas por grupos escolares, juveniles, adultos, aficionados y profesionales. En 1979,
+          se estrena la “Primera Cantata a San Miguel”, que contó con la participación del Orfeón de Carabineros de
+          Chile en la obertura. Anteriormente, había estrenado también “La cantata a Rengo”, la que ha sido reversionada
+          en 2018 y 2021.</p>
+
+        <p>La obra infantil y ecológica, “Mari Mari, Cacique Puma”, presentada por la Compañía de Teatro “Ditirambo” y
+          dirigida en ese entonces por el destacado actor nacional Daniel Muñoz, inauguró la temporada 1990 del Teatro
+          Nacional de Chile, en ese momento el escenario más importante del país. El mismo montaje obtuvo todos los
+          premios en el Festival de Teatro “La Batuta”, al año siguiente.</p>
+
+        <p>En 1992, la obra de teatro infantil “El Encuentro”, es vencedora en la selección iberoamericana de autores de
+          teatro infantil en el evento “Voces con la misma sangre”, estrenándose en Buenos Aires, Argentina, en la
+          conmemoración de los 500 años de la llegada del español a América, donde es invitado a participar.</p>
+
+        <p>En 1993, la obra de teatro escrita y dirigida por él, “Quien fuera yo” obtiene el primer lugar en Encuentro
+          Regional de Teatro Escolar de Enseñanza Media de Pichilemu, puesta en escena del Teatro Experimental Asunción
+          (TEA), del Centro Educacional Asunción de Rengo, lo que los llevó a presentarse en el certamen nacional de
+          teatro estudiantil en La Serena en el mismo año.</p>
+
+        <p>Misma suerte corrió, en el año 2000, la adaptación de “La Guarda Cuidadosa” de Miguel de Cervantes, llamada
+          “ConCervantes del Medioevo”, la cual es reconocida como Mejor Montaje Escolar Nacional, luego de clasificar en
+          el Encuentro Regional de Teatro Escolar de Enseñanza Media de Pichilemu, que en sus más de 30 años de historia
+          ha destacado al maestro Quintanilla numerosas veces, representando a la región en varias oportunidades.</p>
+
+        <p>Además, el maestro Quintanilla participó como actor en diversos montajes teatrales, como “Lautaro” o “El
+          Lazarillo de Tormes”, ambas dirigidas por Andrés Pavez. También ha actuado en cine, destacando “Historias de
+          Fútbol” de Andrés Wood y “La Camelia”, proyecto del Taller de Cine de Rosario; y series para televisión como
+          “Mea Culpa” y “El día menos pensado” de Carlos Pinto.</p>
+
+        <p>En Rengo, ha dirigido a la Compañía de Teatro Municipal en una decena de montajes, donde destacan ya clásicos
+          de su autoría como “La épica del Nano y la Katty”, “El fajo” y otros que además destacan por su aporte a la
+          historia y patrimonio local de la comuna como “La leyenda de Rengo y las Nieves”, “De vinos y amor ardiente”,
+          “Los domingos del Domingo” y “La Fuente de las Palomas”.</p>
+
+        <p>En el año 2017, Quintanilla dirige al colectivo de teatro “Uróboros” de Rengo, en el montaje “El cornudo,
+          apaleado y contento”, adaptación de la comedia original de Alejandro Casona, con quienes desarrolla una
+          veintena de funciones a lo largo y ancho de la región, destacando la presentación en el Teatro Independencia
+          de Mendoza, Argentina, en marzo del 2019.</p>
+
+        <p>El año 2018, la Asociación Cultural Uróboros de Rengo decide llevar adelante la celebración de los 80 años
+          del maestro Hernán Quintanilla Méndez. En este contexto, se desarrollan una serie de acciones con el fin de
+          homenajear su trayectoria y aporte a la cultura y las artes, como también poner en valor y difundir su obra,
+          destacando iniciativas como: “MUTAR: Museo del Teatro y las Artes de Rengo: Sala Hernán Quintanilla Méndez”;
+          el microdocumental “Un cerco al olvido”; el Festival de Teatro de Autor “Quintanilla en Escena”; el
+          nombramiento como Hijo Ilustre de la comuna de Rengo; el nombramiento del Teatro Municipal Hernán Quintanilla
+          Méndez; el montaje de obras teatrales de su autoría como “La Fuente de las Palomas” y “El Cornudo, Apaleado y
+          Contento”; así como múltiples homenajes realizados en el Encuentro Regional de Teatro Escolar de Enseñanza
+          Media en Pichilemu, en el Liceo Luis Urbina Flores de Rengo y en la Escuela Gustavo Bisquert de Popeta.</p>
+
+        <p>El 12 de noviembre del 2021, es galardonado con el “Premio Regional de las Culturas, las Artes y el
+          Patrimonio Francisco Astorga Arredondo”, en la categoría Trayectoria Cultural. Esta primera versión de la
+          iniciativa que buscó reconocer el trabajo artístico y cultural de personas que hayan desarrollado iniciativas
+          significativas en relación con el rescate y fortalecimiento de la identidad de la Región de O’Higgins, fue
+          organizado por la Secretaría Regional Ministerial de las Culturas, las Artes y el Patrimonio.</p>
+
+        <p>El maestro Hernán Quintanilla Méndez fallece el 24 de diciembre del 2021 en Rengo, a los 83 años. Su
+          despedida se realizó masivamente en el Teatro Municipal que lleva su nombre, para luego ser acompañado por una
+          comparsa compuesta por músicos e intérpretes que representaron a algunos de sus personajes hasta el Cementerio
+          Católico de la ciudad.</p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ RECONOCIMIENTOS ══ -->
+<section id="reconocimientos" class="hernan-section hernan-section-alt">
+  <div class="container">
+    <div class="seccion-encabezado hidden-element">
+      <span class="etiqueta">Reconocimientos</span>
+      <h2>Premios y distinciones</h2>
+      <hr class="divisor-rojo">
+      <p class="subtitulo">Más de cinco décadas de reconocimiento al trabajo artístico y pedagógico del maestro.</p>
+    </div>
+
+    <div class="row g-4 mb-5">
+      <div class="col-lg-5 hidden-element">
+        <ul class="timeline">
+          <li><span class="timeline-fecha">1959–1976</span> Poeta Laureado de las Fiestas Primaverales de Rengo, en
+            múltiples ediciones.</li>
+          <li><span class="timeline-fecha">1979</span> Diploma de Honor — Municipalidad de San Miguel.</li>
+          <li><span class="timeline-fecha">1980–1986</span> Múltiples primeros lugares en concursos nacionales de teatro
+            y poesía.</li>
+          <li><span class="timeline-fecha">1984</span> Diploma de Honor — 5° Concurso Literario de Poesía.</li>
+          <li><span class="timeline-fecha">1989</span> 1er Lugar Poesía — Concurso QUANTUM.</li>
+          <li><span class="timeline-fecha">1990</span> "Mari Mari, Cacique Puma" inaugura temporada del Teatro Nacional
+            de Chile.</li>
+          <li><span class="timeline-fecha">1990</span> 1er Lugar Concurso Nacional Teatro Juvenil.</li>
+          <li><span class="timeline-fecha">1992</span> "El Encuentro" seleccionado en evento iberoamericano "Voces con
+            la misma sangre", Buenos Aires.</li>
+          <li><span class="timeline-fecha">1993</span> "Quien fuera yo" — 1er Lugar Encuentro Regional Teatro Escolar,
+            Pichilemu.</li>
+          <li><span class="timeline-fecha">2000</span> "ConCervantes del Medioevo" — Mejor Montaje Escolar Nacional.
+          </li>
+          <li><span class="timeline-fecha">2006</span> Ganador concurso "Chile con mis Ojos".</li>
+          <li><span class="timeline-fecha">2011</span> Premio Abridores de Alamedas, Rengo.</li>
+          <li><span class="timeline-fecha">2018</span> Hijo Ilustre de la comuna de Rengo.</li>
+          <li><span class="timeline-fecha">2018</span> Teatro Municipal de Rengo toma su nombre.</li>
+          <li><span class="timeline-fecha">2021</span> Premio Regional de las Culturas, las Artes y el Patrimonio —
+            Trayectoria Cultural.</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-7 hidden-element" style="transition-delay:0.15s">
+        <div class="galeria-header mb-3">
+          <h4 class="galeria-titulo"><i class="bi bi-images me-2"></i>Galería de documentos y diplomas</h4>
+          <span class="galeria-count">{{ premios.length }} documentos</span>
+        </div>
+        <div class="galeria-grid">
+          <div class="galeria-item" *ngFor="let img of premios; let i = index" (click)="abrirLightbox(premios, i)"
+            [title]="img.caption">
+            <img [src]="img.src" [alt]="img.caption" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ TRAYECTORIA GALERÍA ══ -->
+<section id="trayectoria-galeria" class="hernan-section">
+  <div class="container">
+    <div class="seccion-encabezado hidden-element">
+      <span class="etiqueta">En los Medios</span>
+      <h2>Trayectoria en la prensa</h2>
+      <hr class="divisor-rojo">
+      <p class="subtitulo">Recortes de diarios y revistas que documentan más de 50 años de presencia cultural.</p>
+    </div>
+    <div class="galeria-header mb-3 hidden-element">
+      <h4 class="galeria-titulo"><i class="bi bi-newspaper me-2"></i>Archivo de prensa</h4>
+      <span class="galeria-count">{{ trayectoria.length }} documentos · 1969 – 2011</span>
+    </div>
+    <div class="galeria-grid hidden-element" style="transition-delay:0.1s">
+      <div class="galeria-item" *ngFor="let img of trayectoria; let i = index" (click)="abrirLightbox(trayectoria, i)"
+        [title]="img.caption">
+        <img [src]="img.src" [alt]="img.caption" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ OBRA ══ -->
+<section id="obra" class="hernan-section hernan-section-alt">
+  <div class="container">
+    <div class="seccion-encabezado hidden-element">
+      <span class="etiqueta">Catálogo</span>
+      <h2>Obra teatral y literaria</h2>
+      <hr class="divisor-rojo">
+      <p class="subtitulo">Más de 65 obras entre teatro, poesía, cuentos, himnos y cantatas.</p>
+    </div>
+
+    <div class="obras-grid hidden-element">
+      <div class="obra-card" *ngFor="let obra of obras">
+        <div class="obra-categoria">{{ obra.categoria }}</div>
+        <div class="obra-titulo">{{ obra.titulo }}</div>
+        <div class="obra-nota" *ngIf="obra.nota">{{ obra.nota }}</div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5 hidden-element">
+      <p class="text-gris fst-italic">El catálogo completo de más de 65 obras está en proceso de catalogación por la
+        Fundación.</p>
+    </div>
+  </div>
+</section>

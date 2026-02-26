@@ -1,0 +1,271 @@
+/* Page Header */
+.hernan-header {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+/* Contenedor base */
+.hernan-header-bg {
+  position: absolute;
+  inset: 0;
+}
+
+/* Imagen izquierda (50%) */
+.hernan-header-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-image: url('/assets/img/hernan2.jpg');
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+/* Gradiente ocupa 100% */
+.hernan-header-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(to right,
+      rgba(0, 0, 0, 0.95) 0%,
+      rgba(0, 0, 0, 0.8) 30%,
+      rgba(0, 0, 0, 0.4) 55%,
+      transparent 75%),
+    radial-gradient(circle at 80% 50%,
+      rgba(215, 25, 32, 0.35) 0%,
+      transparent 60%);
+
+}
+
+/* Asegura que el texto quede arriba */
+.hernan-header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hernan-header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.etiqueta-blanca {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 1rem;
+}
+
+.hernan-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  font-weight: 900;
+  color: var(--blanco);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hernan-header h1 em {
+  font-style: italic;
+  color: var(--rojo);
+}
+
+.hernan-header-sub {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 2rem;
+}
+
+.hernan-nav-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.hernan-tab {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.65);
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.hernan-tab:hover {
+  background: var(--rojo);
+  color: white;
+  border-color: var(--rojo);
+}
+
+/* Sections */
+.hernan-section {
+  padding: 5rem 0;
+  background: var(--crema);
+}
+
+.hernan-section-alt {
+  background: var(--blanco);
+}
+
+/* Bio Grid */
+.hernan-bio-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .hernan-bio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.hernan-bio-texto p {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--gris-texto);
+  margin-bottom: 1.25rem;
+}
+
+.hernan-bio-texto em {
+  color: var(--rojo-oscuro);
+  font-style: italic;
+}
+
+/* Hitos */
+.hernan-bio-hitos {
+  background: var(--negro);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  position: sticky;
+  top: 100px;
+}
+
+.hito {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.hito:last-child {
+  margin-bottom: 0;
+}
+
+.hito-anio {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: var(--rojo);
+  min-width: 42px;
+  padding-top: 0.1rem;
+}
+
+.hito-desc {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.5;
+}
+
+.hernan-bio-cont p {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--gris-texto);
+  margin-bottom: 1.25rem;
+}
+
+.hernan-bio-cont em {
+  color: var(--rojo-oscuro);
+  font-style: italic;
+}
+
+/* Gallery Header */
+.galeria-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.galeria-titulo {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--negro);
+}
+
+.galeria-count {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--gris-medio);
+  letter-spacing: 0.05em;
+}
+
+/* Obras */
+.obras-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.obra-card {
+  background: var(--blanco);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 1.1rem 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.obra-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--rojo-suave);
+}
+
+.obra-categoria {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rojo);
+  margin-bottom: 0.3rem;
+}
+
+.obra-titulo {
+  font-family: var(--font-display);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--negro);
+  margin-bottom: 0.25rem;
+  line-height: 1.3;
+}
+
+.obra-nota {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--gris-medio);
+  line-height: 1.4;
+}

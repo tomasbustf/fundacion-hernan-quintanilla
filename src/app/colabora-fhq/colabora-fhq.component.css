@@ -1,0 +1,22 @@
+.page-header { position: relative; background: var(--negro); padding: 5rem 0 3rem; overflow: hidden; }
+.page-header-bg { position: absolute; inset: 0; background: radial-gradient(circle at 70% 50%, rgba(215,25,32,0.18) 0%, transparent 55%); }
+.page-header-content { position: relative; z-index: 1; }
+.etiqueta-blanca { display: inline-block; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); margin-bottom: 0.75rem; }
+.page-header h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.8rem); font-weight: 900; color: var(--blanco); line-height: 1.1; }
+.page-header h1 em { font-style: italic; color: var(--rojo); }
+.page-header-sub { font-family: var(--font-serif); font-size: 1rem; color: rgba(255,255,255,0.55); margin-top: 0.5rem; }
+.seccion-page { padding: 5rem 0; background: var(--crema); }
+.colabora-intro { font-family: var(--font-serif); font-size: 1.05rem; color: var(--gris-texto); line-height: 1.85; margin-bottom: 2.5rem; }
+.formas-colaborar { display: flex; flex-direction: column; gap: 1.25rem; }
+.forma-item { display: flex; gap: 1.25rem; align-items: flex-start; background: var(--blanco); border-radius: var(--radius); padding: 1.25rem; box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.06); }
+.forma-icono { font-size: 1.5rem; color: var(--rojo); flex-shrink: 0; width: 2.5rem; text-align: center; }
+.forma-item h5 { font-family: var(--font-display); font-size: 1rem; color: var(--negro); margin-bottom: 0.3rem; }
+.forma-item p { font-family: var(--font-sans); font-size: 0.88rem; color: var(--gris-texto); margin: 0; line-height: 1.6; }
+.colabora-contacto-card { background: var(--negro); border-radius: var(--radius); padding: 2rem; position: sticky; top: 100px; }
+.colabora-contacto-card h4 { font-family: var(--font-display); color: var(--blanco); margin-bottom: 0.75rem; }
+.colabora-contacto-card > p { font-family: var(--font-sans); font-size: 0.92rem; color: rgba(255,255,255,0.6); margin-bottom: 1.5rem; }
+.contacto-datos { margin-bottom: 1.5rem; }
+.contacto-item { display: flex; gap: 0.75rem; align-items: center; color: rgba(255,255,255,0.65); font-family: var(--font-sans); font-size: 0.9rem; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
+.contacto-item:last-child { border-bottom: none; }
+.contacto-item .bi { color: var(--rojo); font-size: 1.1rem; flex-shrink: 0; }
+.w-100 { width: 100% !important; }
