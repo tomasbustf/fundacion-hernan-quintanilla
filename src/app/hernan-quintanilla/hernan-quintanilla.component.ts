@@ -21,6 +21,12 @@ export class HernanQuintanillaComponent implements AfterViewInit, OnDestroy {
   lightboxIdx = 0;
   lightboxVisible = false;
 
+  // Límites para carga progresiva
+  readonly INITIAL_LIMIT = 12;
+  premiosLimit = this.INITIAL_LIMIT;
+  trayectoriaLimit = this.INITIAL_LIMIT;
+  bioExpanded = false;
+
   readonly premios: ImagenGaleria[] = [
     { src: 'assets/img/premios/premio-01.jpg', caption: 'Concurso de Cuentos El Comercio, Feb. 1970' },
     { src: 'assets/img/premios/premio-02.jpg', caption: 'Encuentro Regional de Teatro Escolar, 1993' },
@@ -91,6 +97,18 @@ export class HernanQuintanillaComponent implements AfterViewInit, OnDestroy {
     { src: 'assets/img/trayectoria/trayectoria-30.jpg', caption: 'El Renguino — Un Poeta Renguino, Jul. 1974' },
     { src: 'assets/img/trayectoria/trayectoria-31.jpg', caption: 'La Poesía en Rengo — Canto a la Reina (texto)' },
   ];
+
+  showMorePremios(): void {
+    this.premiosLimit += 12;
+  }
+
+  showMoreTrayectoria(): void {
+    this.trayectoriaLimit += 12;
+  }
+
+  toggleBio(): void {
+    this.bioExpanded = !this.bioExpanded;
+  }
 
   readonly obras = [
     { titulo: 'Mari Mari, Cacique Puma', categoria: 'Teatro Infantil', nota: 'Inauguró temporada 1990 del Teatro Nacional' },

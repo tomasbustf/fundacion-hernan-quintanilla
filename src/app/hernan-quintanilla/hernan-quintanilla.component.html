@@ -107,16 +107,19 @@
       </div>
     </div>
 
-    <div class="hernan-bio-cont hidden-element">
-      <div class="hernan-bio-cont hidden-element">
+    <!-- Botón Leer Más -->
+    <div class="text-center my-4 hidden-element" *ngIf="!bioExpanded">
+      <button (click)="toggleBio()" class="btn-fhq">
+        <i class="bi bi-book-half me-2"></i> Leer biografía detallada
+      </button>
+    </div>
 
-
-
-
+    <div class="hernan-bio-expandible" [class.show]="bioExpanded">
+      <div class="hernan-bio-cont">
         <p>A su haber, encontramos decenas de obras de teatro, de todos los géneros y estilos; himnos de numerosos
           establecimientos educacionales; cuentos y poemas, donde destacó como Poeta Laureado de las Fiestas
           primaverales de los años 60 y 70.</p>
-
+        
         <p>También, fue actor, director y profesor de teatro. Formador de un sinnúmero de generaciones de artistas y
           gestores culturales, tanto en Rengo, como en otras comunas del gran Santiago.</p>
 
@@ -124,7 +127,7 @@
           Sus obras han sido presentadas por grupos escolares, juveniles, adultos, aficionados y profesionales. En 1979,
           se estrena la “Primera Cantata a San Miguel”, que contó con la participación del Orfeón de Carabineros de
           Chile en la obertura. Anteriormente, había estrenado también “La cantata a Rengo”, la que ha sido reversionada
-          en 2018 y 2021.</p>
+          in 2018 y 2021.</p>
 
         <p>La obra infantil y ecológica, “Mari Mari, Cacique Puma”, presentada por la Compañía de Teatro “Ditirambo” y
           dirigida en ese entonces por el destacado actor nacional Daniel Muñoz, inauguró la temporada 1990 del Teatro
@@ -181,6 +184,11 @@
           comparsa compuesta por músicos e intérpretes que representaron a algunos de sus personajes hasta el Cementerio
           Católico de la ciudad.</p>
 
+        <div class="text-center mt-4">
+          <button (click)="toggleBio()" class="btn-fhq-outline">
+            Leer menos
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -230,10 +238,13 @@
           <span class="galeria-count">{{ premios.length }} documentos</span>
         </div>
         <div class="galeria-grid">
-          <div class="galeria-item" *ngFor="let img of premios; let i = index" (click)="abrirLightbox(premios, i)"
+          <div class="galeria-item" *ngFor="let img of premios.slice(0, premiosLimit); let i = index" (click)="abrirLightbox(premios, i)"
             [title]="img.caption">
             <img [src]="img.src" [alt]="img.caption" loading="lazy">
           </div>
+        </div>
+        <div class="text-center mt-4" *ngIf="premiosLimit < premios.length">
+          <button (click)="showMorePremios()" class="btn-fhq">Ver más documentos</button>
         </div>
       </div>
     </div>
@@ -254,10 +265,13 @@
       <span class="galeria-count">{{ trayectoria.length }} documentos · 1969 – 2011</span>
     </div>
     <div class="galeria-grid hidden-element" style="transition-delay:0.1s">
-      <div class="galeria-item" *ngFor="let img of trayectoria; let i = index" (click)="abrirLightbox(trayectoria, i)"
+      <div class="galeria-item" *ngFor="let img of trayectoria.slice(0, trayectoriaLimit); let i = index" (click)="abrirLightbox(trayectoria, i)"
         [title]="img.caption">
         <img [src]="img.src" [alt]="img.caption" loading="lazy">
       </div>
+    </div>
+    <div class="text-center mt-4 hidden-element" *ngIf="trayectoriaLimit < trayectoria.length">
+      <button (click)="showMoreTrayectoria()" class="btn-fhq">Ver más prensa</button>
     </div>
   </div>
 </section>
