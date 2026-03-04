@@ -9,8 +9,7 @@ import { ObjetivosComponent } from './objetivos/objetivos.component';
 import { DirectorioComponent } from './directorio/directorio.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/inicio', pathMatch: 'full' },
-  { path: 'inicio', component: InicioComponent },
+  { path: '', component: InicioComponent },
   { path: 'fundacion-hernan-quintanilla', component: FundacionHernanQuintanillaComponent },
   { path: 'objetivos', component: ObjetivosComponent },
   { path: 'directorio', component: DirectorioComponent },
@@ -18,4 +17,5 @@ export const routes: Routes = [
   { path: 'noticias', component: NoticiasComponent },
   { path: 'colabora-fhq', component: ColaboraFhqComponent },
   { path: 'contacto', component: ContactoComponent },
+  { path: '**', redirectTo: '' } // fallback
 ];
