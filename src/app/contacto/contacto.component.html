@@ -64,30 +64,68 @@
       <div class="col-lg-5 hidden-element" style="transition-delay:0.2s">
         <div class="contacto-form-card">
           <h4>Envíanos un mensaje</h4>
-          <div class="form-group mb-3">
-            <label class="form-label">Nombre completo</label>
-            <input type="text" class="form-control fhq-input" placeholder="Tu nombre">
+
+          <!-- Alerta éxito -->
+          <div *ngIf="mensajeExito" class="alert alert-success mb-3">
+            ✅ ¡Mensaje enviado correctamente!
           </div>
-          <div class="form-group mb-3">
-            <label class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control fhq-input" placeholder="tu@email.com">
+
+          <!-- Alerta error -->
+          <div *ngIf="mensajeError" class="alert alert-danger mb-3">
+            ❌ Hubo un error al enviar. Intenta de nuevo.
           </div>
-          <div class="form-group mb-3">
-            <label class="form-label">Asunto</label>
-            <select class="form-control fhq-input">
-              <option value="">Selecciona un asunto</option>
-              <option>Colaboración o voluntariado</option>
-              <option>Donación o apoyo</option>
-              <option>Materiales de archivo</option>
-              <option>Actividades o eventos</option>
-              <option>Consulta general</option>
-            </select>
-          </div>
-          <div class="form-group mb-4">
-            <label class="form-label">Mensaje</label>
-            <textarea class="form-control fhq-input" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
-          </div>
-          <button class="btn-fhq-solid w-100">Enviar mensaje</button>
+
+          <form #contactForm="ngForm" (ngSubmit)="enviarMensaje(contactForm)" novalidate>
+
+            <div class="form-group mb-3">
+              <label class="form-label">Nombre completo</label>
+              <input type="text" class="form-control fhq-input" placeholder="Tu nombre" name="nombre"
+                [(ngModel)]="formData.nombre" required #nombre="ngModel">
+              <small *ngIf="nombre.invalid && nombre.touched" class="text-danger">
+                El nombre es requerido.
+              </small>
+            </div>
+
+            <div class="form-group mb-3">
+              <label class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control fhq-input" placeholder="tu@email.com" name="email"
+                [(ngModel)]="formData.email" required email #emailField="ngModel">
+              <small *ngIf="emailField.invalid && emailField.touched" class="text-danger">
+                Ingresa un correo válido.
+              </small>
+            </div>
+
+            <div class="form-group mb-3">
+              <label class="form-label">Asunto</label>
+              <select class="form-control fhq-input" name="asunto" [(ngModel)]="formData.asunto" required
+                #asunto="ngModel">
+                <option value="">Selecciona un asunto</option>
+                <option>Colaboración o voluntariado</option>
+                <option>Donación o apoyo</option>
+                <option>Materiales de archivo</option>
+                <option>Actividades o eventos</option>
+                <option>Consulta general</option>
+              </select>
+              <small *ngIf="asunto.invalid && asunto.touched" class="text-danger">
+                Selecciona un asunto.
+              </small>
+            </div>
+
+            <div class="form-group mb-4">
+              <label class="form-label">Mensaje</label>
+              <textarea class="form-control fhq-input" rows="5" placeholder="Escribe tu mensaje aquí..." name="mensaje"
+                [(ngModel)]="formData.mensaje" required #mensaje="ngModel">
+        </textarea>
+              <small *ngIf="mensaje.invalid && mensaje.touched" class="text-danger">
+                El mensaje es requerido.
+              </small>
+            </div>
+
+            <button type="submit" class="btn-fhq-solid w-100" [disabled]="enviando">
+              {{ enviando ? 'Enviando...' : 'Enviar mensaje' }}
+            </button>
+
+          </form>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ interface ImagenGaleria {
 @Component({
   selector: 'app-hernan-quintanilla',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [CommonModule],
   templateUrl: './hernan-quintanilla.component.html',
   styleUrl: './hernan-quintanilla.component.css'
 })
